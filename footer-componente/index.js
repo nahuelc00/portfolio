@@ -24,7 +24,7 @@ function mountComponentFooter(contComponentFooterEl) {
   function redirectPageHome() {
     const logoEl = footerNewEl.querySelector(".footer__logo");
     logoEl.addEventListener("click", () => {
-      window.location = "./index.html";
+      window.location = "./index.html#welcome";
     });
   }
   redirectPageHome();
