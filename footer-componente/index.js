@@ -4,7 +4,7 @@ function mountComponentFooter(contComponentFooterEl) {
   footerNewEl.innerHTML = `<img class="footer__logo" src="./logos/logo-nombre.png" alt="footer logo" />
   <div class="footer__cont-links">
     <div class="footer__cont-link">
-      <a class="footer__link" href="https://www.linkedin.com" target="__BLANK" >Linkedin</a>
+      <a class="footer__link" href="https://www.linkedin.com/in/nahuel-lorenzo/" target="__BLANK" >Linkedin</a>
       <img
         class="footer__img-link"
         src="./logos/logo-linkedin.png"
