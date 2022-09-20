@@ -1,0 +1,78 @@
+/*Necesita fuente Poppins,weight 700 y 400*/
+/*Necesita fuente Montserrat, weight 700*/
+
+.contacto {
+  display: flex;
+  padding: 0 20px;
+  gap: 37px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 660px;
+}
+@media (min-width: 992px) {
+  .contacto {
+    flex-direction: row;
+    gap: 77px;
+  }
+}
+
+.contacto__title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+@media (min-width: 992px) {
+  .contacto__title {
+    margin: 0 0 360px 0;
+    font-size: 48px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 376px;
+  width: 100%;
+}
+
+.form__fieldset {
+  padding: 0;
+  width: 100%;
+  border-style: none;
+  margin: 0 0 27px 0;
+}
+.form__fieldset--textarea {
+  margin: 0 0 60px 0;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.form__input {
+  height: 45px;
+  border: 3px solid #2c2c2c;
+  border-radius: 4px;
+  outline: none;
+}
+.form__input--textarea {
+  min-height: 113px;
+}
+
+.form__button {
+  height: 45px;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border-style: none;
+}

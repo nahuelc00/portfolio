@@ -1,0 +1,101 @@
+/* Este componente necesita la fuente "Poppins" y "Montserrat" */
+/* Necesita el logo del header. Tambien la img de la cruz para el menu para mobile */
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(134, 134, 134, 1) 3%,
+    rgba(73, 72, 72, 1) 28%,
+    rgba(38, 38, 38, 1) 54%,
+    rgba(38, 38, 38, 1) 66%,
+    rgba(38, 38, 38, 1) 78%,
+    rgba(9, 1, 1, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 20px;
+}
+
+.header__logo {
+  height: 48px;
+  cursor: pointer;
+}
+
+.header-menu-mobile-open {
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .header-menu-mobile-open {
+    display: none;
+  }
+}
+.header-menu-mobile-open__line {
+  width: 36px;
+  height: 6px;
+  background-color: white;
+}
+
+.header-menu-desktop {
+  display: none;
+}
+@media (min-width: 992px) {
+  .header-menu-desktop {
+    display: block;
+  }
+  .header-menu-desktop__links {
+    margin: 0;
+    display: flex;
+    gap: 65px;
+  }
+  .header-menu-desktop__link {
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+/* Aca comienza el menu desplegable */
+
+.ventana-mobile {
+  position: fixed;
+  display: none;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #161616;
+}
+
+.ventana-mobile__cont-links {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 58px;
+}
+
+.ventana-mobile__link {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.ventana-mobile__cont-logo-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 36px 36px 0 0;
+}

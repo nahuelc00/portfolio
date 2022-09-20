@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section welcome */
+.welcome {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(https://i.pinimg.com/originals/7a/b7/9d/7ab79d1e7518a7f776d770f42ff1ea10.jpg);
+}
+
+.welcome__title,
+.welcome__subtitle {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 8px 0;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+.welcome__subtitle {
+  margin: 0;
+  font-size: 32px;
+}
+@media (min-width: 1024px) {
+  .welcome__title {
+    font-size: 80px;
+  }
+}
+
+/* Section presentacion */
+
+.presentacion {
+  padding: 0 31px 0 31px;
+  background-color: #141414;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .presentacion {
+    background-color: white;
+  }
+}
+
+@media (min-width: 1024px) {
+  .presentacion__content {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+  }
+}
+
+.presentacion__img {
+  display: none;
+  width: 400px;
+  height: 520px;
+}
+@media (min-width: 1024px) {
+  .presentacion__img {
+    display: inherit;
+  }
+}
+
+.presentacion__cont-text {
+  margin: 0 auto;
+  max-width: 500px;
+}
+@media (min-width: 1024px) {
+  .presentacion__cont-text {
+    margin: 70px 0 0 0;
+    max-width: 610px;
+  }
+}
+
+.presentacion__title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0 0 46px 0;
+  color: white;
+}
+@media (min-width: 1024px) {
+  .presentacion__title {
+    margin: 0 0 24px 0;
+    text-align: inherit;
+    color: #2c2c2c;
+  }
+}
+.presentacion__text {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .presentacion__text {
+    color: #2c2c2c;
+    font-size: 28px;
+  }
+}
+
+/* Section skills */
+
+.skills {
+  padding: 69px 0px 66px 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .skills {
+    padding: 59px 92px 90px 84px;
+  }
+}
+
+.skills__cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+@media (min-width: 1024px) {
+  .skills__cont-skill:hover {
+    padding: 2px;
+    transition-duration: 0.3s;
+  }
+}
+
+.skills__name-skill {
+  margin: 0 0 3px 0;
+  font-family: "MontSerrat", sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+@media (min-width: 1024px) {
+  .skills__name-skill {
+    color: white;
+  }
+  .skills__name-skill--black {
+    color: black;
+    font-size: 22px;
+    transition-duration: 0.5s;
+  }
+}
+
+.skills__skill {
+  width: 80px;
+  height: 80px;
+}
+@media (min-width: 700px) {
+  .skills__skill {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .skills__skill {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/*Section proyectos*/
+
+.proyects {
+  min-height: 100vh;
+  padding: 69px 10px 66px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .proyects {
+    padding: 59px 92px 90px 84px;
+  }
+}
+
+.proyects__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c2c2c;
+  text-align: center;
+}
+
+@media (min-width: 1600px) {
+  .proyects__title {
+    margin: 0 0 71px 0;
+  }
+}
+
+.proyects__cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .proyects__cont {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.proyects__proyect-cont {
+  display: grid;
+  border-style: solid;
+  border-color: #141414;
+  justify-items: center;
+  border-radius: 5px;
+  padding: 2px;
+  max-width: 500px;
+}
+
+.proyects__proyect-title {
+  font-size: 30px;
+  margin: 12px 0 12px 0;
+  text-align: center;
+  font-family: Poppins;
+}
+
+.proyects__proyect-description {
+  font-size: 20px;
+  margin: 0 5px 15px 5px;
+  text-align: center;
+  font-family: Poppins;
+}
+
+.proyects__proyect-img {
+  width: 200px;
+  height: 250px;
+  margin: 0 0 25px 0;
+}
+
+.proyects__proyect-link {
+  margin: 0 0 15px 0;
+  width: 50px;
+  height: 50px;
+}
+.proyects__proyect-link:hover {
+  cursor: pointer;
+}
+
+.proyects__proyect-link-github {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family: Poppins;
+  margin: 0 0 20px 0;
+}
+
+/* Section contacto */
+.cont-form-contact {
+  display: grid;
+  align-items: center;
+  background-color: #141414;
+  min-height: 100vh;
+}
