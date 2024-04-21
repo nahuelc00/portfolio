@@ -15,28 +15,21 @@ html {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: url(https://i.pinimg.com/originals/7a/b7/9d/7ab79d1e7518a7f776d770f42ff1ea10.jpg);
+  background: url(https://www.softzone.es/app/uploads-softzone.es/2021/05/Programar-en-IDE-1200x675.jpg);
 }
 
 .welcome__title,
 .welcome__subtitle {
   font-family: "Montserrat", sans-serif;
-  margin: 0 0 8px 0;
+  margin: 0 0 8px 15px;
   text-align: center;
   font-size: 50px;
   color: white;
 }
 .welcome__subtitle {
-  margin: 0;
+  margin: 0 0 0px 15px;
   font-size: 32px;
 }
-@media (min-width: 1024px) {
-  .welcome__title {
-    font-size: 80px;
-  }
-}
-
 /* Section presentacion */
 
 .presentacion {
@@ -52,6 +45,9 @@ html {
   }
 }
 
+.presentacion__content {
+  padding: 35px;
+}
 @media (min-width: 1024px) {
   .presentacion__content {
     display: flex;
@@ -62,8 +58,10 @@ html {
 
 .presentacion__img {
   display: none;
-  width: 400px;
-  height: 520px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid black;
 }
 @media (min-width: 1024px) {
   .presentacion__img {
@@ -82,7 +80,8 @@ html {
   }
 }
 
-.presentacion__title {
+.presentacion__title,
+.presentacion__experience {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -90,25 +89,41 @@ html {
   margin: 0 0 46px 0;
   color: white;
 }
+
 @media (min-width: 1024px) {
-  .presentacion__title {
+  .presentacion__title,
+  .presentacion__experience {
     margin: 0 0 24px 0;
     text-align: inherit;
     color: #2c2c2c;
   }
+
+  .presentacion__experience {
+    margin: 20px 0 0 0;
+  }
 }
-.presentacion__text {
+.presentacion__text,
+.presentacion__experience-text {
   color: white;
   font-family: "Poppins", sans-serif;
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
 }
+
+.presentacion__experience-text {
+  max-width: 700px;
+  margin: 0 auto;
+}
 @media (min-width: 1024px) {
-  .presentacion__text {
+  .presentacion__text,
+  .presentacion__experience-text {
     color: #2c2c2c;
-    font-size: 28px;
   }
+}
+
+.presentacion__experience {
+  margin: 100px 0 20px 0;
 }
 
 /* Section skills */
@@ -146,6 +161,7 @@ html {
   font-family: "MontSerrat", sans-serif;
   text-align: center;
   font-size: 18px;
+  text-transform: capitalize;
 }
 @media (min-width: 1024px) {
   .skills__name-skill {
@@ -197,12 +213,30 @@ html {
   font-weight: 700;
   color: #2c2c2c;
   text-align: center;
+  margin: 0 0 15px 0;
 }
 
 @media (min-width: 1600px) {
   .proyects__title {
-    margin: 0 0 71px 0;
+    margin: 0 0 15px 0;
   }
+}
+
+.proyects__description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c2c2c;
+  text-align: center;
+  margin: 0 0 25px 0;
+}
+
+.proyects__description--link {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+.proyects__description--link:hover {
+  color: red;
 }
 
 .proyects__cont {
@@ -228,6 +262,11 @@ html {
   padding: 2px;
   max-width: 500px;
 }
+@media (min-width: 1024px) {
+  .proyects__proyect-cont {
+    height: 700px;
+  }
+}
 
 .proyects__proyect-title {
   font-size: 30px;
@@ -242,28 +281,36 @@ html {
   text-align: center;
   font-family: Poppins;
 }
+@media (min-width: 1024px) {
+  .proyects__proyect-description {
+    height: 260px;
+  }
+}
 
 .proyects__proyect-img {
   width: 200px;
-  height: 250px;
+  height: 200px;
   margin: 0 0 25px 0;
+  border-radius: 50%;
 }
 
+.proyects__links-container{
+  display: flex;
+  gap: 10px;
+}
+
+.proyects__proyect-link-github,
 .proyects__proyect-link {
-  margin: 0 0 15px 0;
-  width: 50px;
-  height: 50px;
-}
-.proyects__proyect-link:hover {
-  cursor: pointer;
-}
-
-.proyects__proyect-link-github {
   text-decoration: none;
   color: black;
   font-size: 20px;
   font-family: Poppins;
-  margin: 0 0 20px 0;
+  margin: 0 0 5px 0;
+}
+
+.proyects__proyect-link-github:hover,
+.proyects__proyect-link:hover {
+  font-weight: bold;
 }
 
 /* Section contacto */
