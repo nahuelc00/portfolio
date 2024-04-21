@@ -69,8 +69,7 @@ function mountComponentHeader(contComponentHeaderEl) {
 
   contComponentHeaderEl.appendChild(headerNewEl);
 
-  // Guardo los links dentro de una variable y lo paso a la función para
-  // que cada vez que realizo el click se cierre la ventana.
+
   const linksMenuHamburguer = document.querySelectorAll(
     ".ventana-mobile__link"
   );

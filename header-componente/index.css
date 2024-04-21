@@ -64,6 +64,12 @@
   }
 }
 
+.header-menu-desktop__link:hover {
+  color: cadetblue;
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
 /* Aca comienza el menu desplegable */
 
 .ventana-mobile {
