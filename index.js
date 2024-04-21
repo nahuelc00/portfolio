@@ -145,6 +145,14 @@ function getProyectsData() {
 
 function connectToSectionProyects() {
   const contProyectsEl = document.querySelector(".proyects__cont");
+  const $contGithubLink = document.createElement("div");
+  const githubLogoEl = document.createElement("img");
+  const textInContGithubEl = document.createElement("span");
+
+  githubLogoEl.src = "./logo-github.png";
+  textInContGithubEl.textContent = "More here";
+  $contGithubLink.appendChild(githubLogoEl);
+  $contGithubLink.appendChild(textInContGithubEl);
 
   getProyectsData().then((proyectsData) => {
     proyectsData.forEach((proyect) => {
@@ -154,9 +162,15 @@ function connectToSectionProyects() {
       const titleEl = document.createElement("p");
       const descriptionEl = document.createElement("p");
 
-      const linkDemoEl = document.createElement("img");
+      const linksContainerEl = document.createElement("div");
+      linksContainerEl.classList.add("proyects__links-container");
+
+      const linkDemoEl = document.createElement("a");
       const imgEl = document.createElement("img");
       const linkGithubEl = document.createElement("a");
+
+      linksContainerEl.appendChild(linkGithubEl);
+      linksContainerEl.appendChild(linkDemoEl);
 
       titleEl.classList.add("proyects__proyect-title");
       titleEl.textContent = proyect.titleProyect;
@@ -165,7 +179,9 @@ function connectToSectionProyects() {
       descriptionEl.classList.add("proyects__proyect-description");
 
       linkDemoEl.classList.add("proyects__proyect-link");
-      linkDemoEl.src = "./logos/redirect.png";
+      linkDemoEl.textContent = "Demo";
+      linkDemoEl.target = "_BLANK";
+      linkDemoEl.href = proyect.linkDemo;
       linkDemoEl.addEventListener("click", () => {
         window.open(proyect.linkDemo);
       });
@@ -173,8 +189,8 @@ function connectToSectionProyects() {
       imgEl.classList.add("proyects__proyect-img");
 
       linkGithubEl.classList.add("proyects__proyect-link-github");
-      linkGithubEl.textContent = "Ver código";
-      linkGithubEl.href = proyect.linkDemo;
+      linkGithubEl.textContent = "Code";
+      linkGithubEl.href = proyect.linkGithub;
       linkGithubEl.target = "_BLANK";
       linkGithubEl.addEventListener("click", () => {
         window.open(proyect.linkGithub);
@@ -186,8 +202,7 @@ function connectToSectionProyects() {
         proyectContEl.appendChild(titleEl);
         proyectContEl.appendChild(descriptionEl);
         proyectContEl.appendChild(imgEl);
-        proyectContEl.appendChild(linkDemoEl);
-        proyectContEl.appendChild(linkGithubEl);
+        proyectContEl.appendChild(linksContainerEl);
         contProyectsEl.appendChild(proyectContEl);
       });
     });
