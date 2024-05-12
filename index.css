@@ -192,6 +192,49 @@ html {
   }
 }
 
+/*Section services*/
+.services {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; 
+  padding: 50px;
+}
+@media (min-width: 700px) {
+  .services {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.services__service {
+  max-width: 300px;
+}
+
+.services__service > h2 {
+  margin: 0;
+}
+
+.services__service-cont-img{
+  display: flex;
+  justify-content: center;
+}
+
+.services__service-img {
+  display: none;
+}
+@media (min-width: 700px) {
+  .services__service-img {
+    display: inherit;
+  } 
+}
+
+.services__service-img {
+  width: 200px;
+  height: 200px;
+}
+
 /*Section proyectos*/
 
 .proyects {
@@ -294,7 +337,7 @@ html {
   border-radius: 50%;
 }
 
-.proyects__links-container{
+.proyects__links-container {
   display: flex;
   gap: 10px;
 }
