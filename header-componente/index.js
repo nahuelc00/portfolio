@@ -13,6 +13,9 @@ function mountComponentHeader(contComponentHeaderEl) {
         <a href="#about" class="header-menu-desktop__link"
           >About</a
         >
+        <a href="#services" class="header-menu-desktop__link"
+        >Servicios</a
+        >
         <a href="#skills" class="header-menu-desktop__link"
           >Skills</a
         >
@@ -27,6 +30,7 @@ function mountComponentHeader(contComponentHeaderEl) {
   </div>
   <div class="ventana-mobile__cont-links">
     <a class="ventana-mobile__link" href="#about">About</a>
+    <a class="ventana-mobile__link" href="#services">Servicios</a>
     <a class="ventana-mobile__link" href="#skills">Skills</a>
     <a class="ventana-mobile__link" href="#proyects">Proyectos</a>
     <a class="ventana-mobile__link" href="#contact">Contacto</a>
